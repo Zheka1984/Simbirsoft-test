@@ -1,0 +1,7 @@
+tests/SimbirTest.class
+pages/Checkout.class
+pages/ShoppingCart.class
+pages/Confirmation.class
+pages/PurchasePage.class
+pages/LoginPage.class
+pages/FinishPage.class

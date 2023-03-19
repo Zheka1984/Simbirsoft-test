@@ -1,0 +1,1 @@
+{"uuid":"81e98117-12ab-4ec4-9092-23c4ae5e0d0b","name":"SimbirTest","children":["caaf0171-4eec-40dc-9f78-b4fc64bba334","84f42b7e-f9ac-4cbe-90f7-0d38a5e47552"],"befores":[{"name":"setup","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1679171606029,"stop":1679171614248}],"afters":[],"links":[],"start":1679171605947,"stop":1679171628243}

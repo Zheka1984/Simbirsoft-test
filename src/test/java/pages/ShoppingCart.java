@@ -8,17 +8,17 @@ import org.openqa.selenium.support.PageFactory;
 public class ShoppingCart {
 
 	WebDriver driver;
-		
-	@FindBy(id="checkout")
+
+	@FindBy(id = "checkout")
 	WebElement checkout;
 
 	public ShoppingCart(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	
+
 	public void clickOnCheckOut() {
 		checkout.click();
 	}
-	
+
 }

@@ -16,9 +16,9 @@ public class FinishPage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	
+
 	public String message() {
 		return successMessage.getText();
 	}
-	
+
 }

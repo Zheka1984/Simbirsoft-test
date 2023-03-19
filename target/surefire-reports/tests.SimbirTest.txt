@@ -1,6 +1,6 @@
 -------------------------------------------------------------------------------
 Test set: tests.SimbirTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.234 s - in tests.SimbirTest
-testPurchase  Time elapsed: 3.965 s
-testError  Time elapsed: 0.532 s
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.283 s - in tests.SimbirTest
+testPurchase  Time elapsed: 13.372 s
+testError  Time elapsed: 0.562 s

@@ -19,7 +19,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 @TestMethodOrder(OrderAnnotation.class)
 public class SimbirTest {
-	
+
 	static WebDriver driver;
 	LoginPage logPage;
 	PurchasePage ppage;
@@ -35,6 +35,7 @@ public class SimbirTest {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
+
 	@BeforeEach
 	void start() {
 		driver.get("https://www.saucedemo.com/");
@@ -43,22 +44,23 @@ public class SimbirTest {
 	@Test
 	@Order(1)
 	void testPurchase() {
-	logPage = new LoginPage(driver);
-	logPage.logIn("standard_user", "secret_sauce");
-	ppage = new PurchasePage(driver);
-	ppage.purchaseFirstIten();
-	ppage.clickToBasket();
-	shcart = new ShoppingCart(driver);
-	shcart.clickOnCheckOut();
-	chpage = new Checkout(driver);
-	chpage.fillData("test", "test", "test");
-	chpage.continueBuy();
-	confPage = new Confirmation(driver);
-	confPage.confirm();
-	fpage = new FinishPage(driver);
-	assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/checkout-complete.html");
-	assertEquals(fpage.message(), "Thank you for your order!");
+		logPage = new LoginPage(driver);
+		logPage.logIn("standard_user", "secret_sauce");
+		ppage = new PurchasePage(driver);
+		ppage.purchaseFirstIten();
+		ppage.clickToBasket();
+		shcart = new ShoppingCart(driver);
+		shcart.clickOnCheckOut();
+		chpage = new Checkout(driver);
+		chpage.fillData("test", "test", "test");
+		chpage.continueBuy();
+		confPage = new Confirmation(driver);
+		confPage.confirm();
+		fpage = new FinishPage(driver);
+		assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/checkout-complete.html");
+		assertEquals(fpage.message(), "Thank you for your order!");
 	}
+
 	@Test
 	@Order(2)
 	void testError() {
@@ -66,5 +68,5 @@ public class SimbirTest {
 		logPage.logIn("test", "test");
 		assertEquals(logPage.getError(), "Epic sadface: Username and password do not match any user in this service");
 	}
-	
+
 }
